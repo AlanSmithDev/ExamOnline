@@ -1,0 +1,287 @@
+[
+    {
+        "id": "service-user-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/user/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-user"
+    },
+    {
+        "id": "service-user-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/user/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-user"
+    },
+    {
+        "id": "service-file-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/file/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-file"
+    },
+    {
+        "id": "service-file-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/file/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-file"
+    },
+    {
+        "id": "service-depart-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/depart/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-depart"
+    },
+    {
+        "id": "service-depart-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/depart/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-depart"
+    },
+    {
+        "id": "service-question-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/question/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-question"
+    },
+    {
+        "id": "service-question-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/question/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-question"
+    },
+    {
+        "id": "service-exam-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/exam/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-exam"
+    },
+    {
+        "id": "service-exam-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/exam/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-exam"
+    },
+    {
+        "id": "service-paper-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/paper/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-paper"
+    },
+    {
+        "id": "service-paper-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/paper/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-paper"
+    },
+    {
+        "id": "service-message-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/message/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-message"
+    },
+    {
+        "id": "websocket-message-router",
+        "order": -3,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ws/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb:ws://api-service-message"
+    },
+    {
+        "id": "service-message-swagger",
+        "order": -2,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/message/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-message"
+    },
+    {
+        "id": "service-log-router",
+        "order": -1,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/log/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://api-service-log"
+    },
+    {
+        "id": "service-log-swagger",
+        "order": -3,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/api/log/v2/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "filters": [
+            {
+                "args": {
+                    "parts": "2"
+                },
+                "name": "StripPrefix"
+            }
+        ],
+        "uri": "lb://api-service-log"
+    }
+]
