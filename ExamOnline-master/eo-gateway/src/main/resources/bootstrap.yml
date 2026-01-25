@@ -1,0 +1,24 @@
+server:
+  port: 88 #1001,1002,1003
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: '192.168.68.60:8748,192.168.68.60:8848,192.168.68.60:8948'
+dubbo:
+  application:
+    id: ${spring.application.name}
+    name: ${spring.application.name}
+    qos-enable: false
+    qos-accept-foreign-ip: false
+  scan:
+    base-packages: com.sdut.examonline
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: 'api-service-user'
