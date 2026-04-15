@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+    <groupId>com.sdut.examonline</groupId>
+    <artifactId>ExamOnline</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>eo-common</module>
+        <module>eo-web</module>
+        <module>eo-gateway</module>
+        <module>eo-service-user</module>
+        <module>eo-service-file</module>
+        <module>eo-service-depart</module>
+        <module>eo-service-question</module>
+        <module>eo-service-exam</module>
+        <module>eo-service-paper</module>
+        <module>eo-dubbo</module>
+        <module>eo-service-message</module>
+        <module>eo-service-log</module>
+    </modules>
+
+    <properties>
+        <poi-tl.version>1.10.1</poi-tl.version>
+        <easyexcel.version>3.0.5</easyexcel.version>
+        <aliyun-sdk-oss.version>3.10.2</aliyun-sdk-oss.version>
+        <baidu-face-sdk.version>4.16.6</baidu-face-sdk.version>
+        <zxing.version>3.2.1</zxing.version>
+        <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <jwt.version>0.9.1</jwt.version>
+        <dozer.version>6.5.2</dozer.version>
+        <knife4j.version>1.9.6</knife4j.version>
+        <swagger.version>2.9.2</swagger.version>
+        <apache.commons.version>3.12.0</apache.commons.version>
+        <mysql.version>8.0.25</mysql.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <log4j2.version>2.17.1</log4j2.version>
+        <lombok.version>1.18.22</lombok.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+</project>
